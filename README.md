@@ -1,1 +1,1 @@
-Raw system bindings to Avahi (Linux only)
+Raw system bindings to Avahi (Linux)

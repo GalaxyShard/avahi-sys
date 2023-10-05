@@ -2,7 +2,7 @@
 name = "avahi-sys"
 version = "0.1.0"
 edition = "2021"
-descripton = "Raw system bindings to Avahi (Linux only)"
+descripton = "Raw system bindings to Avahi (Linux)"
 license = "MIT OR Apache-2.0"
 
 [build-dependencies]
