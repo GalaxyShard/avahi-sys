@@ -4,8 +4,10 @@ use std::path::PathBuf;
 fn main() {
     let out_path = PathBuf::from(env::var("OUT_DIR").unwrap()).join("bindings.rs");
     println!("cargo:rerun-if-changed=wrapper.h");
-    println!("cargo:rustc-link-lib=avahi-client");
-    println!("cargo:rustc-link-lib=avahi-common");
+
+    // Explicitly link Avahi dynamically
+    println!("cargo:rustc-link-lib=dylib=avahi-client");
+    println!("cargo:rustc-link-lib=dylib=avahi-common");
 
     bindgen::Builder::default()
         .header("wrapper.h")
